@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helicopter Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .fact {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .fact:last-child {
+            border-bottom: none;
+        }
+
+        .fact h2 {
+            margin: 0;
+            color: #007BFF;
+        }
+
+        .fact p {
+            margin: 5px 0 0;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Helicopter Facts</h1>
+        <div id="facts-container"></div>
+    </div>
+    <script>
+        const helicopterFacts = [
+            {
+                "fact": "Lift Generation",
+                "description": "Helicopters generate lift through rotating blades, known as rotor blades, which create a difference in air pressure above and below the blades."
+            },
+            {
+                "fact": "Types of Rotors",
+                "description": "There are two main types of rotor systems: single rotor and tandem rotor. Single rotor helicopters have one main rotor and a tail rotor, while tandem rotor helicopters have two main rotors that spin in opposite directions."
+            },
+            {
+                "fact": "Versatility",
+                "description": "Helicopters can take off and land vertically, making them ideal for operations in confined spaces, such as urban areas, mountainous regions, and offshore platforms."
+            },
+            {
+                "fact": "Speed",
+                "description": "The fastest helicopter in the world is the Eurocopter X3, which reached a speed of 472 km/h (293 mph) in 2013."
+            },
+            {
+                "fact": "Flight Control",
+                "description": "Helicopters are controlled using a cyclic stick (which tilts the rotor blades), a collective lever (which changes the pitch of all blades simultaneously), and anti-torque pedals (which control the tail rotor)."
+            },
+            {
+                "fact": "Uses",
+                "description": "Helicopters are used for various purposes, including medical evacuations, search and rescue operations, law enforcement, news reporting, and military operations."
+            },
+            {
+                "fact": "History",
+                "description": "The first successful helicopter flight was conducted by Igor Sikorsky in 1939 with the Vought-Sikorsky VS-300, which featured a single main rotor and a tail rotor."
+            },
+            {
+                "fact": "Altitude",
+                "description": "Helicopters can operate at altitudes of up to 25,000 feet, although most commercial helicopters typically fly at lower altitudes."
+            },
+            {
+                "fact": "Noise Levels",
+                "description": "Helicopters are generally noisier than fixed-wing aircraft due to the rotor blades cutting through the air, which can be a concern in urban environments."
+            },
+            {
+                "fact": "Maintenance",
+                "description": "Helicopters require regular maintenance and inspections due to the complexity of their rotor systems and the stresses they endure during flight."
+            }
+        ];
+
+        const factsContainer = document.getElementById('facts-container');
+
+        helicopterFacts.forEach(fact => {
+            const factDiv = document.createElement('div');
+            factDiv.classList.add('fact');
+            factDiv.innerHTML = `<h2>${fact.fact}</h2><p>${fact.description}</p>`;
+            factsContainer.appendChild(factDiv);
+        });
+    </script>
+</body>
+</html>
